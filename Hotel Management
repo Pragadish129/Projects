@@ -1,0 +1,182 @@
+// Hotel Management Project by Pragadish S
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int quantity;
+    int choice;
+    //Quantity
+    int Quantity_room=0, Quantity_pasta=0, Quantity_burger=0, Quantity_noodle=0, Quantity_shake=0, Quantity_chicken=0;
+    //Sold
+    int Sold_room=0, Sold_pasta=0, Sold_burger=0, Sold_noodle=0, Sold_shake=0, Sold_chicken=0;
+    //Total price
+    int Total_room=0,Total_pasta=0,Total_burger=0,Total_noodle=0,Total_shake=0,Total_chicken=0;
+
+    cout<<"\t Quantity of items "<<endl;
+    cout<<"Rooms available "<<endl;
+    cin>>Quantity_room;
+
+    cout<<"Quantity of Pasta "<<endl;
+    cin>>Quantity_pasta;
+
+    cout<<"Quantity of Burger "<<endl;
+    cin>>Quantity_burger;
+
+    cout<<"Quantity of Noodle "<<endl;
+    cin>>Quantity_noodle;
+
+    cout<<"Quantity of Shake "<<endl;
+    cin>>Quantity_shake;
+
+    cout<<"Quantity of Chicken "<<endl;
+    cin>>Quantity_chicken;
+    
+    menu:
+    cout<<"\t\t\t Please select from the menu options"<<endl;
+    cout<<"1) Rooms"<<endl;
+    cout<<"2) Pasta"<<endl;
+    cout<<"3) Burger"<<endl;
+    cout<<"4) Noodle"<<endl;
+    cout<<"5) Shake"<<endl;
+    cout<<"6) Chicken roll"<<endl;
+    cout<<"7) Information regarding sales and collection"<<endl;
+    cout<<"8) Exit"<<endl;
+
+    cout<<endl;
+    cout<<"Please enter your choice!"<<endl;
+    cin>>choice;
+
+    switch(choice){
+        case 1:
+            cout<<"Enter the number of rooms you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_room-Sold_room>=quantity){
+                Sold_room=Sold_room+quantity;
+                Total_room=Total_room+(quantity*5000);
+                cout<<quantity<<" room/rooms have been alloted to you"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_room-Sold_room<<" Rooms remaining"<<endl;
+                break;
+            }
+
+        case 2:
+            cout<<"Enter the number of Pastas you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_pasta-Sold_pasta>=quantity){
+                Sold_pasta=Sold_pasta+quantity;
+                Total_pasta=Total_pasta+(quantity*500);
+                cout<<quantity<<" pasta is the order!"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_pasta-Sold_pasta<<" Pastas remaining"<<endl;
+                break;
+            }
+
+        case 3:
+            cout<<"Enter the number of Burger you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_burger-Sold_burger>=quantity){
+                Sold_burger=Sold_burger+quantity;
+                Total_burger=Total_burger+(quantity*400);
+                cout<<quantity<<" burger is the order!"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_burger-Sold_burger<<" burger remaining"<<endl;
+                break;
+            }
+
+        case 4:
+            cout<<"Enter the number of Noodle you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_noodle-Sold_noodle>=quantity){
+                Sold_noodle=Sold_noodle+quantity;
+                Total_noodle=Total_noodle+(quantity*300);
+                cout<<quantity<<" noodle is the order!"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_noodle-Sold_noodle<<" noodle remaining"<<endl;
+                break;
+            }
+
+        case 5:
+            cout<<"Enter the number of Shake you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_shake-Sold_shake>=quantity){
+                Sold_shake=Sold_shake+quantity;
+                Total_shake=Total_shake+(quantity*200);
+                cout<<quantity<<" shake is the order!"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_shake-Sold_shake<<" shake remaining"<<endl;
+                break;
+            }
+
+        case 6:
+            cout<<"Enter the number of Chicken you want: "<<endl;
+            cin>>quantity;
+            if(Quantity_chicken-Sold_chicken>=quantity){
+                Sold_chicken=Sold_chicken+quantity;
+                Total_chicken=Total_chicken+(quantity*750);
+                cout<<quantity<<" chicken is the order!"<<endl;
+                break;
+            }else{
+                cout<<"Only "<<Quantity_chicken-Sold_chicken<<" chicken remaining"<<endl;
+                break;
+            }
+
+        case 7:
+                cout<<"\t\t Details of sales and collection"<<endl;
+                cout<<"\t Number of rooms we had: "<<Quantity_room<<endl;
+                cout<<"\t Number of rooms we gave for rent "<<Sold_room<<endl;
+                cout<<"\t Remaining rooms: "<<Quantity_room-Sold_room<<endl;
+                cout<<"\t Total rooms collection for the day : "<<Total_room<<endl;
+
+                cout<<"\t Number of pastas we had: "<<Quantity_pasta<<endl;
+                cout<<"\t Number of pastas we sold "<<Sold_pasta<<endl;
+                cout<<"\t Remaining pastas: "<<Quantity_pasta-Sold_pasta<<endl;
+                cout<<"\t Total pastas collection for the day : "<<Total_pasta<<endl;
+
+                cout<<"\t Number of burgers we had: "<<Quantity_burger<<endl;
+                cout<<"\t Number of burgers we sold "<<Sold_burger<<endl;
+                cout<<"\t Remaining burgers: "<<Quantity_burger-Sold_burger<<endl;
+                cout<<"\t Total burgers collection for the day : "<<Total_burger<<endl;
+
+                cout<<"\t Number of noodles we had: "<<Quantity_noodle<<endl;
+                cout<<"\t Number of noodles we sold "<<Sold_noodle<<endl;
+                cout<<"\t Remaining noodles: "<<Quantity_noodle-Sold_noodle<<endl;
+                cout<<"\t Total noodles collection for the day : "<<Total_noodle<<endl;
+
+                cout<<"\t Number of shakes we had: "<<Quantity_shake<<endl;
+                cout<<"\t Number of shakes we sold "<<Sold_shake<<endl;
+                cout<<"\t Remaining shakes: "<<Quantity_shake-Sold_shake<<endl;
+                cout<<"\t Total shakes collection for the day : "<<Total_shake<<endl;
+
+                cout<<"\t Number of chickens we had: "<<Quantity_chicken<<endl;
+                cout<<"\t Number of chickens we sold "<<Sold_chicken<<endl;
+                cout<<"\t Remaining chickens: "<<Quantity_chicken-Sold_chicken<<endl;
+                cout<<"\t Total chickens collection for the day : "<<Total_chicken<<endl;
+
+                cout<<endl;
+                cout<<"\t Total collection for the day"<<Total_room+Total_pasta+Total_burger+Total_noodle+Total_shake+Total_chicken<<endl;
+                break;
+
+        case 8: 
+                exit(0);
+
+            //any other apart from the above numbers
+        default:
+                cout<<"Please select the numbers mentioned above"<<endl;
+
+    }
+    goto menu;
+
+
+
+
+
+
+
+}
